@@ -1,16 +1,19 @@
 #!/usr/bin/perl -w
 use warnings;
 use strict;
-my $dna = 'CGACGTCTTCTCAGGCGA';
-my $longer_dna = addACGT($dna);
-print "I added ACGT to $dna and got $longer_dna\n\n";
+my $dna = 'AAAAA';
+
+my $result = A_to_T($dna);
+print "I changed all the A's in $dna to T's and got $result\n\n";
 
 exit;
+sub A_to_T {
 
-sub addACGT {
+   my ($input) = @_;
 
-     my ($dna) = @_;
+   my $dna = $input;
 
-      $dna .= 'ACGT';
-     return $dna;
+   $dna =~ s/A/T/g;
+
+   return $dna;
 }
