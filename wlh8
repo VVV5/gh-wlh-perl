@@ -1,0 +1,14 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+my $dna='AACCTTTAACTGG';
+for (my $i=0;$i<10;++$i){
+    print randomposition($dna), " ";
+}
+print"\n";
+exit;
+sub randomposition{
+    my ($string)=@_;
+    return int rand length $string;
+}
+
