@@ -1,0 +1,26 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+
+sub mutate_better {
+
+my($dna) = @_;
+
+my(@nucleotides) = ('A', 'C', 'G', 'T');
+
+# Pick a random position in the DNA
+
+my($position) = randomposition($dna);
+
+# Pick a random nucleotide
+
+my($newbase);
+do{
+  $newbase =randomnucleotide(@nucleotides);
+} until($newbase ne subster($dna,$position,1));
+# Insert the random nucleotide into the random
+# The substr arguments mean the following:
+# In the string $dna at position $position change 1
+# the string in $newbase
+substr($dna,$position,1,$newbase);
+return $dna;
