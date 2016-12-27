@@ -1,0 +1,16 @@
+sub condon2aa{
+ my ($codon)=@_;
+ $codon=uc $codon;
+ my (%genetic_code)=(
+ 'CGA'=> 'R',
+ 'CGT'=> 'R',
+ 'CTT'=> 'L',
+);
+if (exists $genetic_code{$codon}) {
+   return $genetic_code{$codon};
+} else{
+ print STDERP "Bad codon \"$codon\"!!\n";
+ exit;
+ }
+}
+
