@@ -1,1 +1,36 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+my $num='';
+do{
+print"\n********sign up********\n";
+print"1.entering\n";
+print"2.sign in\n";
+print"3.error message\n";
+print"4.exit\n";
+$num=<STDIN>;
+chomp $num;
+if($num eq "1"){
+  print"\n filling in your personal information:\n";
+} elsif($num eq "2"){
+  print"\n signing in your usename and password:\n";
+print "username :\n";
+  my $usename=<STDIN>;
+  chomp $usename;
+  print "password:\n";
+  my $password=<STDIN>;
+  chomp $password;
+  my (%filename)=(
+  "$usename" => "$password",
+);
+my ($k,$v) = each %filename;
+print "$k\n$v\n";
 
+}elsif($num="3") {
+   print"\n your massage are error,please enter again\n";
+ }
+
+else{
+  print"\n you already exit program\n";
+}
+}
