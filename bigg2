@@ -4,7 +4,6 @@ my $num='';
 do{
 print"\n********sign up********\n";
 print"1.entering\n";
-print"2.sign in\n";
 print"exit:enter space!\n";
 $num=<STDIN>;
 chomp $num;
@@ -14,18 +13,6 @@ if($num eq "1"){
   $uname = <STDIN>;
   chomp $uname;
   hml($uname);
-}
-elsif($num eq "2"){
-  print"\n signing in your usename and password:\n";
-  print "username :\n";
-  my $usename=<STDIN>;
-  chomp $usename;
-  print "password:\n";
-  my $password=<STDIN>;
-  chomp $password;
-  my (%filename)=(
-  "$usename" => "$password",
-);
 }
 elsif ($num=~/^\s*$/) {
   print"\n you already exit program\n";
