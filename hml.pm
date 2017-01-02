@@ -13,7 +13,24 @@ open my $SHUJU,'>>',$name or die "$0 : failed to open input file '%hash' : $!\n"
 'highblood' => ' ',
 'lowblood' => ' ',
 'sleephours' => ' ',
+'username' => ' ',
+'password' => ' ',
 );
+
+
+
+
+
+
+print "username:\n";
+$username = <STDIN>;
+chomp $username;
+$hash{'username'} = $usrname;
+
+print "tell me your password:\n";
+$password = <STDIN>;
+chomp $password;
+$hash{'password'} = $password;
 
 print "tell me your sex,boy or girl:\n";
 $sex = <STDIN>;
